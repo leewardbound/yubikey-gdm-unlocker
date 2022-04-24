@@ -1,0 +1,13 @@
+[Unit]
+Description=yubikey gdm unlocker
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/bash /home/linked/p/leeward/yubikey_gdm_unlocker/service.sh
+User=linked
+Group=linked
+
+[Install]
+WantedBy=multi-user.target
+
