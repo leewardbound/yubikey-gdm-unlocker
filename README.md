@@ -20,6 +20,8 @@ automations, it is completely optional.
 
 ## TO INSTALL ANYWAY
 
++ Requires `ykman` binary to detect yubikey presence, and uses `loginctl` and `caffienate` to wake the machine.
+
 + Populate .localenv with values. If you use `direnv` in your shell, some values will get populated for you, but at the
   very least, it must have the line `YUBIKEY_GDM_UNLOCKER_YUBIKEYS=xxxx,yyyy`, where xxxx and yyyy are replaced by IDs
   of your yubikey devices that you want to recognize for the unlock.
