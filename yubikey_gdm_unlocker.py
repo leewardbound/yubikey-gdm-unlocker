@@ -163,8 +163,9 @@ def unlock_forever():
 
         if valid_key:
             if not running:
-                debug("keys: unlocking...")
-                subprocess.Popen("unlock.sh", shell=True)
+                fn = os.path.join(os.path.dirname(os.path.realpath(__file__)), "unlock.sh")
+                debug("keys: unlocking with %s..."%fn)
+                subprocess.Popen(fn, shell=True)
         elif running:  # invalid and running
             debug("keys: not valid, stopping", running)
             for pid in running:
